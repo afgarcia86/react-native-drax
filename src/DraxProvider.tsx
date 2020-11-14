@@ -20,7 +20,11 @@ import {
 } from './types';
 import { getRelativePosition } from './math';
 
-export const DraxProvider: FunctionComponent<DraxProviderProps> = ({ debug = false, multicolumn = false, children }) => {
+export const DraxProvider: FunctionComponent<DraxProviderProps> = ({
+	debug = false,
+	multicolumn = false,
+	children,
+}) => {
 	const {
 		getViewState,
 		getTrackingStatus,
@@ -455,6 +459,7 @@ export const DraxProvider: FunctionComponent<DraxProviderProps> = ({ debug = fal
 			findMonitorsAndReceiver,
 			setMonitorIds,
 			debug,
+			multicolumn,
 		],
 	);
 

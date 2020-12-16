@@ -246,6 +246,8 @@ exports.DraxList = ({ data, style, itemStyles, renderItemContent, renderItemHove
         originalIndexes.forEach((originalIndex, index) => {
             const { width: itemWidth = 0, height: itemHeight = 0, } = itemMeasurementsRef.current[originalIndex] ?? {};
             const shift = shiftsRef.current[originalIndex];
+            if (!shift)
+                return;
             let newTargetValue = { x: 0, y: 0 };
             if (index > fromIndex && index <= toIndex) {
                 newTargetValue = negOffset;
